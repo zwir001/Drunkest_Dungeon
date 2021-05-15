@@ -8,11 +8,14 @@ class Location
     int current_room;
 
     public:
+    Location( int size );
 
-    void get_length( int length );
+    int get_length( );
 
-    void get_current_room();
+    int get_current_room();
 
     int randomize();
+    
+    void next_room();
 
 };

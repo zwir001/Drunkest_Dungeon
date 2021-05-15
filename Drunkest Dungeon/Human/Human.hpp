@@ -8,13 +8,13 @@ class Human
     int health;
 
     public:
+    Human();
+
     Human( std::string obj_name, int obj_health );
 
     std::string get_name(  );
     
     int get_health( );
-
-    void fight();
 
 };
 

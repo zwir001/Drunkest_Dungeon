@@ -4,47 +4,47 @@
 #include "Location/Location.hpp"
 #include "Loot/Biwo/Biwo.hpp"
 #include "Loot/Relic/Relic.hpp"
+#include "Human/Teacher/Teacher.hpp"
 
-class Student: public Human
+class Student : public Human
 {
-    private:
+private:
     int it;
     int maths;
     int psyche;
     int sorcery;
     bool alive;
 
-    public:
-    Student(int stat_it, int stat_m, int stat_p, int stat_s);
+public:
+    Student(std::string obj_name, int obj_health, int stat_it, int stat_m, int stat_p, int stat_s);
 
-    int get_it( int it );
+    int get_it();
 
-    int get_maths( int maths );
+    int get_maths();
 
-    int get_psyche( int psyche );
+    int get_psyche();
 
-    int get_sorcery( int sorcery );
+    int get_sorcery();
 
-    int increase_it( int it );
+    void increase_it(int strength);
 
-    int increase_maths( int maths );
+    void increase_maths(int strength);
 
-    int increase_psyche( int psyche );
+    void increase_psyche(int strength);
 
-    int increase_sorcery( int sorcery );
+    void increase_sorcery(int strength);
 
-    void move();
+    void move(Location Location);
 
-    void checkroom( Location Location );
+    void checkroom(Location Location);
 
-    void fight();
+    void fight(Teacher Teacher);
 
-    void restore();
+    void restore(int strength);
 
-    void use_Biwo( Biwo Biwo );
+    void use_Biwo(Biwo Biwo);
 
-    void use_Relic( Relic Relic);
+    void use_Relic(Relic Relic);
 
     void finish();
-
 };

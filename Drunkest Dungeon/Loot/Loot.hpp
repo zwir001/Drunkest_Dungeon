@@ -4,16 +4,14 @@
 
 class Loot
 {
-    private:
+    protected:
 
     std::string name;
     int strength;
 
     public:
+    Loot();
 
-    Loot( std::string loot_name, int loot_stat, int loot_stat_type);
-
-    void increase_stat( int stat, int stat_type);
+    Loot( std::string loot_name, int loot_stat );
     
-    void randomize();
 };

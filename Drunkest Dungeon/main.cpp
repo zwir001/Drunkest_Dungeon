@@ -1,10 +1,15 @@
-//#include "Dziekanat/Dziekanat.h"
+//#include "Dziekanat/Dziekanat.hpp"
 #include <iostream>
-#include "Human/Human.hpp"
+//#include "Human/Student/Student.hpp"
+#include <cstdlib>
+#include <ctime>
+
 int main()
 {
-    Human jebaniec( "C++", 0);
-    std::cout<<jebaniec.get_health()<< "to jest chujec : "<<jebaniec.get_name();
+    srand( time( NULL ) );
+    setlocale(LC_ALL, "pl_PL");
+    //Human jebaniec( "C++", 0);
+    std::cout<<(1<10)?1:0;
 
     return 0;
 }
