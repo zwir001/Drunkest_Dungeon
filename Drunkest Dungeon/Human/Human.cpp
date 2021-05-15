@@ -2,6 +2,12 @@
 
 #include <string>
 
+Human::Human()
+{
+    name = "brak";
+    health = 0;
+}
+
 Human::Human( std::string obj_name, int obj_health )
 {
     name=obj_name;

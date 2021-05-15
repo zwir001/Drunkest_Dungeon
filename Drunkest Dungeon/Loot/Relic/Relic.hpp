@@ -5,13 +5,15 @@
 class Relic: public Loot
 {
     private:
-    int stat;
     int stat_type;
 
     public:
-    Relic( int relic_stat, int relic_stat_type );
-    
-    void randomize();
+    Relic(std::string relic_name, int relic_strength, int relic_stat_type );
 
-    void increase_stat( int stat, int stat_type );
+    
+    int get_stat_type( );
+
+    int increase_stat( );
+
+    int randomize( );
 };
