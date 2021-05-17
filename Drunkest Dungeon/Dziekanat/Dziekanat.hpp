@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Human/Student/Student.hpp"
-#include "Human/Teacher/Teacher.hpp"
-#include "Location/Location.hpp"
-#include "Loot/Biwo/Biwo.hpp"
-#include "Loot/Relic/Relic.hpp"
+#include "../Human/Student/Student.hpp"
+#include "../Human/Teacher/Teacher.hpp"
+#include "../Location/Location.hpp"
+#include "../Loot/Biwo/Biwo.hpp"
+#include "../Loot/Relic/Relic.hpp"
 
 class Dziekanat
 {
@@ -15,7 +15,9 @@ class Dziekanat
     Biwo Biwo;
     Relic Relic[4];
 
-    Dziekanat();
+    Dziekanat( int i);
+
+    Teacher get_enemy( int index );
 
     void simulation();
 };
