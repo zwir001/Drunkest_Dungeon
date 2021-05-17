@@ -13,6 +13,5 @@ int main()
     //Teacher g("Jędrzej Soldierek", 300, 69, 3, "Egzekucja", 150, 50 );
     Student a("Kamil Gnojnar", 1200, 17, 20, 35, 23 );
     a.fight(test.get_enemy(0));
-    
     return 0;
 }

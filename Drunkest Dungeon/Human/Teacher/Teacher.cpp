@@ -6,7 +6,6 @@
 Teacher::Teacher(std::string obj_name, int obj_health, int s, int s_type, std::string u_name, int u_power, int u_chance)
     : Human(obj_name, obj_health)
 {
-
     stat = s;
     stat_type = s_type;
     ulti_name = u_name;
@@ -17,6 +16,7 @@ Teacher::Teacher(std::string obj_name, int obj_health, int s, int s_type, std::s
 bool Teacher::ultimate_power()
 {
     return (std::rand() % 1000 < ulti_chance) ? 1 : 0;
+
 }
 
 std::string Teacher::get_ulti_name()
