@@ -2,8 +2,8 @@
 #include <iostream>
 
 Student::Student(std::string obj_name, int obj_health, int stat_it, int stat_m, int stat_p, int stat_s)
+    : Human(obj_name, obj_health)
 {
-    Student::Human(obj_name, obj_health);
     it = stat_it;
     maths = stat_m;
     psyche = stat_p;
@@ -79,7 +79,7 @@ void Student::fight(Teacher Teacher)
             {
                 std::cout << "Przeciwnik używa umiejętności specjalnej: " << Teacher.get_ulti_name() << std::endl
                           << "Tracisz " << Teacher.get_ulti_power() << " punktów życia.";
-                health -= Teacher.ultimate_power();
+                health -= Teacher.get_ulti_power();
             }
             else
             {
@@ -93,9 +93,9 @@ void Student::fight(Teacher Teacher)
             }
             else
                 alive = 0;
-            std::cout << "Koniec Tury" << std::endl
+            std::cout << std::endl << "Koniec Tury" << std::endl << std::endl
                       << "Twoje punkty życia: " << health << std::endl
-                      << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl;
+                      << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl << std::endl;
             if (Teacher.get_health() <= 0)
                 break;
         }
@@ -111,8 +111,8 @@ void Student::fight(Teacher Teacher)
             if (Teacher.ultimate_power())
             {
                 std::cout << "Przeciwnik używa umiejętności specjalnej: " << Teacher.get_ulti_name() << std::endl
-                          << "Tracisz " << Teacher.get_ulti_power() << " punktów życia.";
-                health -= Teacher.ultimate_power();
+                          << "Tracisz " << Teacher.get_ulti_power() << " punktów życia." << std::endl;
+                health -= Teacher.get_ulti_power();
             }
             else
             {

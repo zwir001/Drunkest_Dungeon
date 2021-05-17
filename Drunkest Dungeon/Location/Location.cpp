@@ -33,13 +33,10 @@ int Location::randomize() //zawartość pokoju czy nauczyciel, relic, biwo, pust
     {
         return 2;
     }
-    if(seed>=80 || seed<100)
-    {
-        return 3;
-    }
+    return 3;
 }
+
 void Location::next_room()
 {
     if(current_room<length) current_room++;
 }
-

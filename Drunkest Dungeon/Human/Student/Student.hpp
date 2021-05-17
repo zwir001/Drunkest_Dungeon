@@ -1,10 +1,11 @@
 #pragma once
 
-#include "Human/Human.hpp"
-#include "Location/Location.hpp"
-#include "Loot/Biwo/Biwo.hpp"
-#include "Loot/Relic/Relic.hpp"
-#include "Human/Teacher/Teacher.hpp"
+
+#include "../Human.hpp"
+#include "../../Location/Location.hpp"
+#include "../../Loot/Biwo/Biwo.hpp"
+#include "../../Loot/Relic/Relic.hpp"
+#include "../Teacher/Teacher.hpp"
 
 class Student : public Human
 {
@@ -16,6 +17,9 @@ private:
     bool alive;
 
 public:
+
+    Student();
+
     Student(std::string obj_name, int obj_health, int stat_it, int stat_m, int stat_p, int stat_s);
 
     int get_it();

@@ -1,9 +1,9 @@
 #include "Relic.hpp"
 #include <cstdlib>
 
-Relic::Relic(std::string relic_name, int relic_strength,  int relic_stat_type )
+Relic::Relic(std::string relic_name, int relic_strength, int relic_stat_type)
+    : Loot(relic_name, relic_strength)
 {
-    Relic::Loot( relic_name, relic_strength );
     stat_type = relic_stat_type;
 }
 
@@ -19,6 +19,6 @@ int Relic::increase_stat()
 
 int Relic::randomize() //rodzaj relica
 {
-    int seed=std::rand()%4;
+    int seed = std::rand() % 4;
     return seed;
 }
