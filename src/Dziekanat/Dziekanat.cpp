@@ -1,6 +1,6 @@
 #include "Dziekanat.hpp"
 
-Dziekanat::Dziekanat()
+Dziekanat::Dziekanat( int i )
 {
     Enemies[0] = Teacher("Jędrzej Soldierek", 300, 69, 3, "Egzekucja", 150, 5 );
 }

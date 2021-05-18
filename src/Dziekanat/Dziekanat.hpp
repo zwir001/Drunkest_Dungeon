@@ -15,7 +15,7 @@ class Dziekanat
     Biwo Biwo;
     Relic Relic[4];
 
-    Dziekanat();
+    Dziekanat( int i);
 
     Teacher get_enemy( int index );
 

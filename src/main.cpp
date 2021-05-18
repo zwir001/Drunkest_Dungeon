@@ -1,4 +1,5 @@
-#include "Dziekanat.hpp"
+#include "Dziekanat/Dziekanat.hpp"
+#include "Dziekanat/Human/Student/Student.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -9,12 +10,10 @@ int main()
     //setlocale(LC_ALL, "pl_PL");
     system("chcp 65001");
     //system( "cls" );
-    //Dziekanat test;
-    Teacher g("Jędrzej Soldierek", 300, 69, 3, "Egzekucja", 150, 50 );
+    Dziekanat test(1);
+    //Teacher g("Jędrzej Soldierek", 300, 69, 3, "Egzekucja", 150, 50 );
     Student a("Kamil Gnojnar", 1200, 17, 20, 35, 23 );
-    //a.fight(test.get_enemy(0));
-    a.fight(g);
-    
+    a.fight(test.get_enemy(0));
     
     return 0;
 }
