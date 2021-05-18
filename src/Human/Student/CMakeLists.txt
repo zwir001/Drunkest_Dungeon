@@ -1,11 +1,13 @@
-set(MODULE_NAME Student)
+set(MODULE_NAME student)
+
+message("compile ${MODULE_NAME}")
 
 set(INTERNAL_FILES
-Student.cpp
+  Student.cpp
 )
 
 set(PUBLIC_HEADERS
-Student.hpp
+  Student.hpp
 )
 
 add_library(
@@ -22,12 +24,14 @@ target_include_directories(
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
-target_link_libraries(${MODULE_NAME}
-PRIVATE lib::Relic
-lib::Human
-lib::Location 
-lib::Biwo 
-lib::Teacher 
+target_link_libraries(
+  ${MODULE_NAME}
+  PRIVATE 
+    lib::relic
+    lib::human
+    lib::location 
+    lib::biwo 
+    lib::teacher 
 )
 
 add_library(lib::${MODULE_NAME} ALIAS ${MODULE_NAME})

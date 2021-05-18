@@ -1,14 +1,15 @@
-set(MODULE_NAME Human)
+set(MODULE_NAME human)
 
-add_subdirectory(Student)
-add_subdirectory(Teacher)
+message("compile ${MODULE_NAME}")
+
+
 
 set(INTERNAL_FILES
-Human.cpp
+  Human.cpp
 )
 
 set(PUBLIC_HEADERS
-Human.hpp
+  Human.hpp
 )
 
 add_library(
@@ -26,9 +27,9 @@ target_include_directories(
 )
 target_link_libraries(
     ${MODULE_NAME}
-  PRIVATE 
-    lib::Teacher
-    lib::Student
     )
 
 add_library(lib::${MODULE_NAME} ALIAS ${MODULE_NAME})
+
+add_subdirectory(Student)
+add_subdirectory(Teacher)

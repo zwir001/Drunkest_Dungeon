@@ -1,6 +1,6 @@
-set(MODULE_NAME Bin)
+set(MODULE_NAME bin)
 
-message("src")
+message("compile ${MODULE_NAME} For run type ./src/bin")
 
 add_subdirectory(Dziekanat)
 add_subdirectory(Human)
@@ -15,11 +15,12 @@ add_executable(
 target_link_libraries(
     ${MODULE_NAME}
   PRIVATE 
-    lib::Dziekanat
-    lib::Human
-    lib::Location
-    lib::Loot
-    lib::Relic)
+    lib::dziekanat
+    lib::human
+    lib::location
+    lib::loot
+    lib::relic
+)
 
 # add the binary tree to the search path for include files
 target_include_directories(

@@ -1,11 +1,13 @@
-set(MODULE_NAME Location)
+set(MODULE_NAME location)
+
+message("compile ${MODULE_NAME}")
 
 set(INTERNAL_FILES
-Location.cpp
+  Location.cpp
 )
 
 set(PUBLIC_HEADERS
-Location.hpp
+  Location.hpp
 )
 
 add_library(
@@ -21,6 +23,7 @@ target_include_directories(
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
 target_link_libraries(${MODULE_NAME}
 )
 

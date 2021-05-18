@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Human/Student/Student.hpp"
-#include "Human/Teacher/Teacher.hpp"
-#include "Location/Location.hpp"
-#include "Loot/Biwo/Biwo.hpp"
-#include "Loot/Relic/Relic.hpp"
+#include "src/Human/Student/Student.hpp"
+#include "src/Human/Teacher/Teacher.hpp"
+#include "src/Location/Location.hpp"
+#include "src/Loot/Biwo/Biwo.hpp"
+#include "src/Loot/Relic/Relic.hpp"
 
 class Dziekanat
 {

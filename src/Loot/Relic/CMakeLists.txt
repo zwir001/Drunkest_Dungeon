@@ -1,13 +1,13 @@
-set(MODULE_NAME dziekanat)
+set(MODULE_NAME relic)
 
 message("compile ${MODULE_NAME}")
 
 set(INTERNAL_FILES
-  Dziekanat.cpp
+  Relic.cpp
 )
 
 set(PUBLIC_HEADERS
-  Dziekanat.hpp
+  Relic.hpp
 )
 
 add_library(
@@ -20,10 +20,14 @@ target_include_directories(
   ${MODULE_NAME}
   PRIVATE 
     ${MODULE_NAME}
+    ${PROJECT_SOURCE_DIR}
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
 target_link_libraries(${MODULE_NAME}
+  PRIVATE 
+    lib::loot    
 )
 
 add_library(lib::${MODULE_NAME} ALIAS ${MODULE_NAME})

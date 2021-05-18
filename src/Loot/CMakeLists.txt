@@ -1,11 +1,13 @@
-set(MODULE_NAME Loot)
+set(MODULE_NAME loot)
+
+message("compile ${MODULE_NAME}")
 
 set(INTERNAL_FILES
-Loot.cpp
+  Loot.cpp
 )
 
 set(PUBLIC_HEADERS
-Loot.hpp
+  Loot.hpp
 )
 
 add_library(
@@ -22,7 +24,11 @@ target_include_directories(
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
 target_link_libraries(${MODULE_NAME}
 )
 
 add_library(lib::${MODULE_NAME} ALIAS ${MODULE_NAME})
+
+add_subdirectory(Biwo)
+add_subdirectory(Relic)

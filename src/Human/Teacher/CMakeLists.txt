@@ -1,4 +1,4 @@
-set(MODULE_NAME Teacher)
+set(MODULE_NAME teacher)
 
 set(INTERNAL_FILES
 Teacher.cpp
@@ -23,7 +23,8 @@ target_include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 target_link_libraries(${MODULE_NAME}
-PRIVATE lib::Human
+  PRIVATE 
+    lib::human
 )
 
 add_library(lib::${MODULE_NAME} ALIAS ${MODULE_NAME})
