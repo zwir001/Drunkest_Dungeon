@@ -1,10 +1,10 @@
 #pragma once
 
-#include "src/Dziekanat/Human/Human.hpp"
-#include "src/Dziekanat/Location/Location.hpp"
-#include "src/Dziekanat/Loot/Biwo/Biwo.hpp"
-#include "src/Dziekanat/Loot/Relic/Relic.hpp"
-#include "src/Dziekanat/Teacher/Teacher.hpp"
+#include "src/Human/Human.hpp"
+#include "src/Location/Location.hpp"
+#include "src/Loot/Biwo/Biwo.hpp"
+#include "src/Loot/Relic/Relic.hpp"
+#include "src/Human/Teacher/Teacher.hpp"
 
 class Student : public Human
 {
@@ -16,7 +16,7 @@ private:
     bool alive;
 
 public:
-    Student();
+    Student(){};
 
     Student(std::string obj_name, int obj_health, int stat_it, int stat_m, int stat_p, int stat_s);
 

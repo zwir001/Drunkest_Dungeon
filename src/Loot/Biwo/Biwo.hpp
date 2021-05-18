@@ -1,12 +1,12 @@
 #pragma once
 
-#include "src/Dziekanat/Loot/Loot.hpp"
+#include "src/Loot/Loot.hpp"
 
 class Biwo: public Loot
 {
     public:
     
-    Biwo();
+    Biwo(){};
 
     Biwo( int strength_stat );
     int increase_health(  );

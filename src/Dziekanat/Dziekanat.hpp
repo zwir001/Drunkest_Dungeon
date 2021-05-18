@@ -12,8 +12,8 @@ class Dziekanat
     Teacher Enemies[5];
     Student Students[3];
     Location Locations[3];
-    Biwo Biwo;
-    Relic Relic[4];
+    Biwo biwo;
+    Relic relic[4];
 
     Dziekanat( int i);
 

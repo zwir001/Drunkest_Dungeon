@@ -1,6 +1,6 @@
 #pragma once
 
-#include "src/Dziekanat/Loot/Loot.hpp"
+#include "src/Loot/Loot.hpp"
 
 class Relic: public Loot
 {
@@ -8,7 +8,7 @@ class Relic: public Loot
     int stat_type;
 
     public:
-    Relic();
+    Relic(){};
     
     Relic(std::string relic_name, int relic_strength, int relic_stat_type );
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "src/Dziekanat/Human/Human.hpp"
+#include "src/Human/Human.hpp"
 
 class Teacher: public Human
 {
@@ -13,7 +13,7 @@ class Teacher: public Human
     int ulti_chance;
 
     public:
-    Teacher();
+    Teacher(){};
 
     Teacher(std::string obj_name, int obj_health, int s, int s_type, std::string u_name, int u_power, int u_chance );
 

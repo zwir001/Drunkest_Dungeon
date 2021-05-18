@@ -8,7 +8,7 @@ class Location
     int current_room;
 
     public:
-    Location();
+    Location(){};
     
     Location( int size );
 

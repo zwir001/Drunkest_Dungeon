@@ -1,5 +1,5 @@
 #include "Dziekanat/Dziekanat.hpp"
-#include "Dziekanat/Human/Student/Student.hpp"
+#include "Human/Student/Student.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
