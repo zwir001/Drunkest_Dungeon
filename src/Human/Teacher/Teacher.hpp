@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TEACHER_HPP
+#define TEACHER_HPP
 
 #include "src/Human/Human.hpp"
 
@@ -31,4 +32,6 @@ class Teacher: public Human
 
 
 };
+
+#endif
 

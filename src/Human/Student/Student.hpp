@@ -1,4 +1,5 @@
-#pragma once
+#ifndef STUDENT_HPP
+#define STUDENT_HPP
 
 #include "src/Human/Human.hpp"
 #include "src/Location/Location.hpp"
@@ -44,9 +45,11 @@ public:
 
     void restore(int strength);
 
-    void use_Biwo(Biwo Biwo);
+    void use_Biwo(Biwo& Biwo);
 
-    void use_Relic(Relic Relic);
+    void use_Relic(Relic& Relic);
 
     void finish();
 };
+
+#endif

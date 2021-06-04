@@ -11,7 +11,7 @@ set(INTERNAL_FILES
 set(PUBLIC_HEADERS
   Human.hpp
 )
-
+# zbudowanie libki a nie binarki
 add_library(
   ${MODULE_NAME}
   ${INTERNAL_FILES}

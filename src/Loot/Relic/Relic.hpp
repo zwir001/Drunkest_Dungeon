@@ -1,4 +1,5 @@
-#pragma once
+#ifndef RELIC_HPP
+#define RELIC_HPP
 
 #include "src/Loot/Loot.hpp"
 
@@ -19,3 +20,5 @@ class Relic: public Loot
 
     int randomize( );
 };
+
+#endif
