@@ -1,5 +1,8 @@
-#pragma once
+#ifndef HUMAN_HPP
+#define HUMAN_HPP
+
 #include <string>
+
 class Human
 {
     protected:
@@ -18,4 +21,5 @@ class Human
 
 };
 
+#endif
 

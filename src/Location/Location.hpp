@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LOCATION_HPP
+#define LOCATION_HPP
 
 class Location
 {
@@ -21,3 +22,5 @@ class Location
     void next_room();
 
 };
+
+#endif

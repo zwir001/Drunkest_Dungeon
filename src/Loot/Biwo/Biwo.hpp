@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BIWO_HPP
+#define BIWO_HPP
 
 #include "src/Loot/Loot.hpp"
 
@@ -11,3 +12,5 @@ class Biwo: public Loot
     Biwo( int strength_stat );
     int increase_health(  );
 };
+
+#endif

@@ -1,6 +1,7 @@
 #include "Student.hpp"
 #include <iostream>
 
+ 
 Student::Student(std::string obj_name, int obj_health, int stat_it, int stat_m, int stat_p, int stat_s)
     : Human(obj_name, obj_health)
 {
@@ -93,9 +94,12 @@ void Student::fight(Teacher Teacher)
             }
             else
                 alive = 0;
-            std::cout << std::endl << "Koniec Tury" << std::endl << std::endl
+            std::cout << std::endl
+                      << "Koniec Tury" << std::endl
+                      << std::endl
                       << "Twoje punkty życia: " << health << std::endl
-                      << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl << std::endl;
+                      << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl
+                      << " " << std::endl;
             if (Teacher.get_health() <= 0)
                 break;
         }
@@ -120,9 +124,10 @@ void Student::fight(Teacher Teacher)
                 health -= Teacher.get_stat();
             }
 
-            std::cout << "Koniec Tury" << std::endl
-                      << "Twoje punkty życia: " << health << std::endl
-                      << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl;
+            std::cout <<std::endl << "Koniec Tury" << std::endl
+            << "Twoje punkty życia: " << health << std::endl
+                      << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl
+                      << " " << std::endl;
             if (health <= 0)
                 alive = 0;
         }
@@ -143,14 +148,14 @@ void Student::restore(int strength)
     health += strength;
 }
 
-void Student::use_Biwo(Biwo Biwo)
+void Student::use_Biwo(Biwo &Biwo)
 {
     std::cout << " Wypiles Biwo, wracają ci siły witalne. " << std::endl;
     restore(Biwo.increase_health());
     std::cout << " Twój aktualny poziom zdrowia to: " << health << std::endl;
 }
 
-void Student::use_Relic(Relic Relic)
+void Student::use_Relic(Relic &Relic)
 {
     switch (Relic.get_stat_type())
     {

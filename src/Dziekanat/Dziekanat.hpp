@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DZIEKANAT_HPP
+#define DZIEKANAT_HPP
 
 #include "src/Human/Student/Student.hpp"
 #include "src/Human/Teacher/Teacher.hpp"
@@ -21,3 +22,5 @@ class Dziekanat
 
     void simulation();
 };
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LOOT_HPP
+#define LOOT_HPP
 
 #include <string>
 
@@ -15,3 +16,5 @@ class Loot
     Loot( std::string loot_name, int loot_stat );
     
 };
+
+#endif
