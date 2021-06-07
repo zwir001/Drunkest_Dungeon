@@ -30,7 +30,9 @@ class Teacher: public Human
 
     void lose_health(int damage);
 
+    static int randomize();
 
+    void show();
 };
 
 #endif

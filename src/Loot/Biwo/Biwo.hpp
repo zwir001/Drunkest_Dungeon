@@ -10,7 +10,11 @@ class Biwo: public Loot
     Biwo(){};
 
     Biwo( int strength_stat );
+
     int increase_health(  );
+
+    void show(){};
+
 };
 
 #endif

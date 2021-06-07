@@ -6,17 +6,25 @@
 #include "src/Location/Location.hpp"
 #include "src/Loot/Biwo/Biwo.hpp"
 #include "src/Loot/Relic/Relic.hpp"
+#include <string>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <windows.h>
+
 
 class Dziekanat
 {
-    public:
-    Teacher Enemies[5];
-    Student Students[3];
-    Location Locations[3];
+    private:
+    Teacher enemies[15];
+    Student students;
+    Location locations;
     Biwo biwo;
     Relic relic[4];
 
-    Dziekanat( int i);
+    public:
+    
+    Dziekanat();
 
     Teacher get_enemy( int index );
 

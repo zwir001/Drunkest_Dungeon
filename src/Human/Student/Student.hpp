@@ -6,6 +6,8 @@
 #include "src/Loot/Biwo/Biwo.hpp"
 #include "src/Loot/Relic/Relic.hpp"
 #include "src/Human/Teacher/Teacher.hpp"
+#include <windows.h>
+
 
 class Student : public Human
 {
@@ -39,8 +41,6 @@ public:
 
     void move(Location Location);
 
-    void checkroom(Location Location);
-
     void fight(Teacher Teacher);
 
     void restore(int strength);
@@ -49,7 +49,9 @@ public:
 
     void use_Relic(Relic& Relic);
 
-    void finish();
+    bool check_alive();
+
+    void show(){};
 };
 
 #endif

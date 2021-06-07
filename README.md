@@ -11,4 +11,10 @@ make
 ./src/bin 
 
 on win terminal 
-......
+
+#to build 
+cd build
+cmake ..
+make 
+#to run
+./src/bin.exe 

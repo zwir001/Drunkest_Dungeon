@@ -18,7 +18,9 @@ class Relic: public Loot
 
     int increase_stat( );
 
-    int randomize( );
+    static int randomize( );
+
+    void show(){};
 };
 
 #endif

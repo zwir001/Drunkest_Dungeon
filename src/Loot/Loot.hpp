@@ -2,6 +2,7 @@
 #define LOOT_HPP
 
 #include <string>
+#include <iostream>
 
 class Loot
 {
@@ -14,6 +15,9 @@ class Loot
     Loot();
 
     Loot( std::string loot_name, int loot_stat );
+    private:
+
+    virtual void show() = 0;
     
 };
 

@@ -1,4 +1,4 @@
-# minimum cmake versin. to chack type $cmake --version 
+# minimum cmake version. to check type $cmake --version 
 cmake_minimum_required(VERSION 3.12)
 
 # set the project name

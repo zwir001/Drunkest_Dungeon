@@ -57,22 +57,11 @@ void Student::move(Location Location)
     Location.next_room();
 }
 
-void Student::checkroom(Location Location)
-{
-    /*switch(Location.randomize())
-    {
-        case 0:
-        use_Biwo(Biwo);
-        break;
-        case 1:
-        
-    }*/
-}
-
 void Student::fight(Teacher Teacher)
 {
     int stat_tab[4] = {it, maths, psyche, sorcery};
-    if (stat_tab[Teacher.get_stat_type()] > Teacher.get_stat())
+    Teacher.show();
+    if (stat_tab[Teacher.get_stat_type()] < Teacher.get_stat())
     {
         while (alive)
         {
@@ -81,25 +70,29 @@ void Student::fight(Teacher Teacher)
                 std::cout << "Przeciwnik używa umiejętności specjalnej: " << Teacher.get_ulti_name() << std::endl
                           << "Tracisz " << Teacher.get_ulti_power() << " punktów życia.";
                 health -= Teacher.get_ulti_power();
+                Sleep(1000);
             }
             else
             {
                 std::cout << "Tracisz " << Teacher.get_stat() << " punktów życia." << std::endl;
                 health -= Teacher.get_stat();
+                Sleep(1000);
             }
             if (health > 0)
             {
                 std::cout << "Zadajesz " << stat_tab[Teacher.get_stat_type()] << " punktów obrażeń." << std::endl;
                 Teacher.lose_health(stat_tab[Teacher.get_stat_type()]);
+                Sleep(1000);
             }
             else
                 alive = 0;
             std::cout << std::endl
-                      << "Koniec Tury" << std::endl
+                      << "Koniec Tury"<<"\n----------------------------------------------\n"
                       << std::endl
                       << "Twoje punkty życia: " << health << std::endl
                       << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl
                       << " " << std::endl;
+            Sleep(3000);
             if (Teacher.get_health() <= 0)
                 break;
         }
@@ -110,6 +103,7 @@ void Student::fight(Teacher Teacher)
         {
             std::cout << "Zadajesz " << stat_tab[Teacher.get_stat_type()] << " punktów obrażeń." << std::endl;
             Teacher.lose_health(stat_tab[Teacher.get_stat_type()]);
+            Sleep(1000);
             if (Teacher.get_health() <= 0)
                 break;
             if (Teacher.ultimate_power())
@@ -117,24 +111,27 @@ void Student::fight(Teacher Teacher)
                 std::cout << "Przeciwnik używa umiejętności specjalnej: " << Teacher.get_ulti_name() << std::endl
                           << "Tracisz " << Teacher.get_ulti_power() << " punktów życia." << std::endl;
                 health -= Teacher.get_ulti_power();
+                Sleep(1000);
             }
             else
             {
                 std::cout << "Tracisz " << Teacher.get_stat() << " punktów życia." << std::endl;
                 health -= Teacher.get_stat();
+                Sleep(1000);
             }
 
             std::cout <<std::endl << "Koniec Tury" << std::endl
-            << "Twoje punkty życia: " << health << std::endl
+            <<"----------------------------------------------\n"<< "Twoje punkty życia: " << health << std::endl
                       << "Punkty życia przeciwnika: " << Teacher.get_health() << std::endl
                       << " " << std::endl;
+            Sleep(3000);
             if (health <= 0)
                 alive = 0;
         }
     }
     if (alive)
     {
-        std::cout << " Pokonałeś przeciwnika." << std::endl;
+        std::cout << "Pokonałeś przeciwnika." << std::endl;
     }
     else
     {
@@ -150,9 +147,10 @@ void Student::restore(int strength)
 
 void Student::use_Biwo(Biwo &Biwo)
 {
-    std::cout << " Wypiles Biwo, wracają ci siły witalne. " << std::endl;
+    std::cout << "Jest ciemno, w powietrzu rozchodzi się znajoma woń..."
+    <<std::endl<<"Znajdujesz Biwo i je wypijasz. Wracają ci siły witalne... " << std::endl;
     restore(Biwo.increase_health());
-    std::cout << " Twój aktualny poziom zdrowia to: " << health << std::endl;
+    std::cout << "Twój aktualny poziom zdrowia to: " << health << std::endl;
 }
 
 void Student::use_Relic(Relic &Relic)
@@ -161,21 +159,30 @@ void Student::use_Relic(Relic &Relic)
     {
     case 0:
         increase_it(Relic.increase_stat());
-        std::cout << "Znalazłeś Pizzę z musztardą i ananasem. Obecny poziom IT: " << it << std::endl;
+        std::cout << "Czujesz nieprzyjemny swąd, piekące opary gorczycy podrażniają twoje oczy..."
+        <<std::endl<<"Znajdujesz Pizzę z musztardą i ananasem. Obecny poziom IT: " << it << std::endl;
         break;
     case 1:
         increase_maths(Relic.increase_stat());
-        std::cout << "Znalazłeś Koci żwirek. Obecny poziom matematyki: " << maths << std::endl;
+        std::cout << "Coś zaczyna chrupać pod twoimi stopami..."
+        <<std::endl<<"Znajdujesz Koci żwirek. Obecny poziom matematyki: " << maths << std::endl;
         break;
     case 2:
         increase_psyche(Relic.increase_stat());
-        std::cout << "Znalazłeś Teologie Kultury. Obecny poziom filozofii: " << psyche << std::endl;
+        std::cout << "Do twoich uszu dochodzą dźwięki anielskich chórów..."
+        <<std::endl<<"Znajdujesz Teologię Kultury. Obecny poziom filozofii: " << psyche << std::endl;
         break;
     case 3:
         increase_sorcery(Relic.increase_stat());
-        std::cout << "Znalazłeś Mikrofon. Obecny poziom drylu: " << sorcery << std::endl;
+        std::cout<<"Twój głośnik JBL nagle zaczyna sprzężać..."
+        <<std::endl<<"Znajdujesz Mikrofon. Obecny poziom drylu: " << sorcery << std::endl;
         break;
     default:
         break;
     }
+}
+
+bool Student::check_alive()
+{
+    return alive;
 }

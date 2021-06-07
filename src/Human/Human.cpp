@@ -1,6 +1,7 @@
 #include "Human.hpp"
 
 #include <string>
+#include <iostream>
 
 Human::Human()
 {

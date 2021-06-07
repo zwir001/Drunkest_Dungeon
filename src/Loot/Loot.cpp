@@ -11,3 +11,4 @@ Loot::Loot( std::string loot_name, int loot_stat )
     name = loot_name;
     strength = loot_stat;
 }
+
