@@ -16,7 +16,6 @@ int Relic::increase_stat()
 {
     return strength;
 }
-
 int Relic::randomize() //rodzaj relica
 {
     int seed = std::rand() % 4;

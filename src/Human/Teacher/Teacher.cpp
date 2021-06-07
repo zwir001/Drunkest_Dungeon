@@ -16,7 +16,7 @@ Teacher::Teacher(std::string obj_name, int obj_health, int s, int s_type, std::s
 
 bool Teacher::ultimate_power()
 {
-    return (std::rand() % 1000 < ulti_chance) ? 1 : 0;
+    return (std::rand() % 100 < ulti_chance) ? 1 : 0;
 }
 
 std::string Teacher::get_ulti_name()
@@ -42,4 +42,15 @@ int Teacher::get_ulti_power()
 void Teacher::lose_health(int damage)
 {
     health -= damage;
+}
+
+int Teacher::randomize()
+{
+    int seed = std::rand() % 15;
+    
+    return seed;
+}
+void Teacher::show()
+{
+    std::cout<<"\nNapotykasz: "<<name<<", wasza walka będzie legendarna..."<<std::endl;
 }

@@ -1,23 +1,28 @@
 #ifndef LOCATION_HPP
 #define LOCATION_HPP
 
+#include <string>
+
 class Location
 {
     private:
-
+    std::string name; 
     int length;
     int current_room;
 
     public:
     Location(){};
     
-    Location( int size );
+    Location(std::string name, int size );
+
 
     int get_length( );
 
+    std::string get_name();
+    
     int get_current_room();
 
-    int randomize();
+    static int randomize();
     
     void next_room();
 

@@ -19,6 +19,8 @@ class Human
     
     int get_health( );
 
+    virtual void show() = 0;
+
 };
 
 #endif
