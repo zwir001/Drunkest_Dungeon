@@ -81,7 +81,7 @@ Dziekanat::Dziekanat()
             check = false;
             std::cout << "Jak się nazywasz?: " << std::endl;
             std::string name;
-            //std::cin >> name;
+            std::getline(std::cin >> std::ws,name);
             int stats[5] = {0, 0, 0, 0, 0};
             std::cout << " Podaj kolejno ile ma wynosić" << std::endl;
             while (1)
