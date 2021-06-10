@@ -2,7 +2,7 @@
 
 void show_student(int index, std::string name, int health, int it, int m, int p, int s)
 {
-    std::cout << "( " << index << " )\nImię: " << name << "\nPunkty życia: " << health << "\nIT: " << it << "\nMatematyka: " << m << "\nFilozofia: " << p << "\nDryl: " << s << std::endl;
+    std::cout << "( " << index << " )\n\tImię: " << name << "\n\tPunkty życia: " << health << "\n\tIT: " << it << "\n\tMatematyka: " << m << "\n\tFilozofia: " << p << "\n\tDryl: " << s << std::endl;
 }
 Dziekanat::Dziekanat()
 {
